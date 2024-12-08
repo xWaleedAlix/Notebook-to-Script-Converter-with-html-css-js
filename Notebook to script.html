@@ -195,6 +195,27 @@ cursor: pointer;
 .toast.invalid::after{
     background: darkred;
 }
+@media only screen and (max-width: 600px){
+    #main{
+        padding: 0 15%;
+    }
+    .textareabox{
+        flex-direction: column;
+    }
+    .textareabox textarea {
+        height: 20vh;
+        width: 100%;
+        margin: 0;
+}
+.btn{
+    height:auto;
+    margin: 10px;
+   justify-content: center;
+}
+.toast{
+    width: 300px;
+}
+}
     </style>
     <body>
         <div id="main">
@@ -254,7 +275,6 @@ function showToast(msg) {
     } else if (msg === invalidMsg) {
         toast.classList.add("invalid");
     }
-
     setTimeout(() => {
         toast.remove();
     }, 5500);
